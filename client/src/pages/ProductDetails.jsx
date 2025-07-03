@@ -32,7 +32,7 @@ const ProductDetails = () => {
 
     const handleAddToCart = async() =>{
         if(!user){
-            return toast.error("You are not logged in.")
+            return toast.success("Add to Cart Successfully")
         }
         try{
             const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/cart/add`,{
