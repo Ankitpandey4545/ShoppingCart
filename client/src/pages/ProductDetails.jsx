@@ -10,6 +10,7 @@ const ProductDetails = () => {
     const [product,setProduct] = useState(null)
     const [loading,setLoading] = useState(true)
     const user = useSelector(state=>state.auth.user)
+    console.log("user",user);
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
