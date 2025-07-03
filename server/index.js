@@ -52,9 +52,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: 'https://e-commerce-bjhg.vercel.app',
+  origin: process.env.CLIENT_URL,
   credentials: true
 }));
+
 
 app.use("/api/auth", authRouter);
 app.use("/api/cart", cartRouter);
