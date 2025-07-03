@@ -9,6 +9,7 @@ const verifyToken = (req, res, next) => {
         }
 
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        console.log("decoded",decoded)
         req.id = decoded.id;
         next();
 
