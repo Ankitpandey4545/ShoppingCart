@@ -24,6 +24,7 @@ const App = () => {
   const getUser = () => {
     getUserFromServer().then((data) => {
       if (data.success) {
+        console.log("data",data);
         dispatch(setUser(data.user))
         dispatch(setCart(data.user.cart))
       }
