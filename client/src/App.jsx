@@ -23,6 +23,7 @@ const App = () => {
   const [isDarkMode,setIsDarkMode] = useState(false)
   const getUser = () => {
     getUserFromServer().then((data) => {
+      console.log("data",data)
       if (data.success) {
         console.log("data",data);
         dispatch(setUser(data.user))
