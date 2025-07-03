@@ -102,7 +102,8 @@ const logout = (req, res) => {
 const getUser = async (req, res) => {
   try {
     const user = await User.findById(req.id).select("-password");
-
+    console.log("user",user)
+    const newUser=await User.findById(req.id).select("-password");
     if (!user)
       return res.status(404).json({
         success: false,
